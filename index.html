@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    
+</head>
+<body>
+    <h1>TIMER</h1>
+    <div id="time"></div>
+    <script>
+        function show(){
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            s=s<10?"0"+s:s;
+            document.getElementById('time').innerHTML=h+":"+m+":"+s;
+        }
+        setInterval("show()",1000)
+    </script>
+</body>
+</html>
